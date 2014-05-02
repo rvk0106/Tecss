@@ -1,0 +1,13 @@
+// Place all the styles related to the Subjects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.list_image{
+width: 60px;
+height: 70px;
+}
+.list_line_even{
+background: #e0f8f8;
+}
+.list_line_odd{
+background: #B0B0B0 ;
+}
