@@ -1,0 +1,36 @@
+<h1>Listing topics</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Image url</th>
+      <th>Subject</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @topics.each do |topic| %>
+      <tr>
+        <td><%= topic.title %></td>
+        <td><%= topic.description %></td>
+        <td><%= image_tag(topic.image_url, class: 'list_image') %></td>
+        <td><%= topic.subject %></td>
+        <td><%= link_to 'Show', topic %></td>
+        <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
+        <td><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<a href="/Viewer.js/#../files/test.pdf" target="_blank">test</a>
+
+<%= link_to 'Back', subjects_path %>
+<%= link_to 'New Topic', new_topic_path %>
